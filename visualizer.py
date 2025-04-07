@@ -230,7 +230,7 @@ class Visualizer:
         choose_algo = tk.StringVar(value='CBS')
         choose_algo_button = tk.OptionMenu(button_frame,choose_algo, 'CBS', 'ICTS', command=self.choose_algorithm)
         choose_algo_button.config(bg="lightpink")
-        choose_algo_button.pack(side=tk.LEFT, padx=10) 
+        choose_algo_button.pack(side=tk.LEFT) 
 
         # Nút "Close"
         close_button = tk.Button(button_frame, text="Close", command=self.close_program, bg="lightcoral")
