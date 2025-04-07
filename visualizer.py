@@ -42,7 +42,7 @@ class Visualizer:
         self.goal_patches.clear()
         self.initial_positions.clear()
 
-        colors = ['red', 'blue', 'green', 'orange', 'purple', 'cyan']
+        colors = ['red', 'blue', 'green', 'orange', 'purple', 'cyan', 'brown', 'gray', 'pink']
         for i, path in enumerate(self.solutions):
             color = colors[i % len(colors)]
 
@@ -227,8 +227,8 @@ class Visualizer:
         choose_file_button.pack(side=tk.LEFT, padx=5)
 
         # Nút "Choose algorithm"
-        choose_algo = tk.StringVar(value='CBS')
-        choose_algo_button = tk.OptionMenu(button_frame,choose_algo, 'CBS', 'ICTS', command=self.choose_algorithm)
+        choose_algo = tk.StringVar(self.root, value='CBS')
+        choose_algo_button = tk.OptionMenu(button_frame,choose_algo, *('CBS', 'ICTS'), command=self.choose_algorithm)
         choose_algo_button.config(bg="lightpink")
         choose_algo_button.pack(side=tk.LEFT) 
 
